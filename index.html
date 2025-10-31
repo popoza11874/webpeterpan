@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio - Peterpan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+ <header class="navbar">
+  <div class="container nav-inner">
+    <div class="logo">
+     <img src="assets\images\Peter_Pan_disney.jpg" alt="Logo" class="logo-img" />
+      <span class="logo-text">Peterpan.</span>
+    </div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="btn-nav">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="pill">💡 Portfolio Website</p>
+        <h1>Hi, I'm <span class="accent">Peter pan</span> 👋</h1>
+        <p class="subtitle">
+          This will be a website introducing myself and the projects I'm working on. Thank you to everyone who came to
+          see it.
+        </p>
+        <p class="subtitle">
+          จะเป็นเว็ปแนะนำตัวของผมและโปรเจคที่ผมทำครับผมขอบคุณทุกคนที่เข้ามาชมน่ะครับ
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View my work</a>
+          <a href="#contact" class="btn ghost">Hire me</a>
+        </div>
+        <div class="hero-small">
+          <span>📍 Bangkok, Thailand</span>
+          <span>Available for freelance</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets\images\554978351_1782397109067726_2618355835055271781_n.jpg" alt="Profile"
+          class="hero-avatar" />
+        <h2>Peterpan</h2>
+        <p>Web Developer · Student</p>
+        <div class="hero-tags">
+          <span>Vue 3</span>
+          <span>Node.js</span>
+          <span>UI/UX</span>
+          <span>React</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About me</h2>
+      <p class="section-text" style="margin-top:8px; color:#cbd5e1;">
+        I'm a web developer who enjoys creating beautiful and functional websites.
+        I can work with Vue 3, Node.js, and create REST APIs. I like clean UI,
+        responsive design, and building projects that solve real problems.
+      </p>
+      <p class="section-text" style="margin-top:8px; color:#cbd5e1;">
+        ฉันเป็นนักพัฒนาเว็บไซต์ที่ชื่นชอบการสร้างเว็บที่ทั้งสวยงามและใช้งานได้จริง
+        สามารถทำงานด้วย Vue 3, Node.js และสร้าง REST API ได้
+        ฉันให้ความสำคัญกับการออกแบบ UI ที่เรียบง่าย สวยงาม และตอบโจทย์การใช้งานจริง
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>What I do</h3>
+          <p>Frontend, small business website, dashboard UI, POS concept.</p>
+        </div>
+        <div class="about-card">
+          <h3>Experience</h3>
+          <p>2+ years learning & building personal projects.</p>
+        </div>
+        <div class="about-card">
+          <h3>Tools</h3>
+          <p>VS Code, GitHub, Postman, Figma (basic)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, Vue 3, Vite, Responsive design</p>
+        </div>
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <p>Node.js, Express, REST API, Auth (JWT)</p>
+        </div>
+        <div class="skill-card">
+          <h3>Database</h3>
+          <p>MySQL, schema design</p>
+        </div>
+        <div class="skill-card">
+          <h3>Others</h3>
+          <p>Git, basic UI/UX, Figma, Deploy (Netlify/Render)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>ShoeYourShot</h3>
+          <p>Online shoe store (Vue + Node + MySQL) with cart and auth.</p>
+          <a href="#" class="project-link">View demo →</a>
+        </article>
+        <article class="project-card">
+          <h3>BookSync</h3>
+          <p>Library management system with members, books, and borrow/return.</p>
+          <a href="#" class="project-link">View demo →</a>
+        </article>
+        <article class="project-card">
+          <h3>POS Dashboard</h3>
+          <p>Concept UI for stock, adjust stock, and history page.</p>
+          <a href="#" class="project-link">View demo →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-text">Want to work together? Send me a message 👇</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea rows="4" placeholder="Your message"></textarea>
+        <button type="submit" class="btn primary">Send message</button>
+      </form>
+      <p class="contact-alt">
+        or email me: <a href="mailto:youremail@example.com">youremail@example.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © <span id="year"></span> Your Name. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

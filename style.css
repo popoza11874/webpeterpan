@@ -1,0 +1,311 @@
+:root {
+  --bg: #10172a;            /* พื้นหลังเข้มแบบไม่ดำสนิท */
+  --bg-soft: rgba(30, 41, 59, 0.6); /* สำหรับกล่อง/section */
+  --accent: #3b82f6;        /* ฟ้าอ่านง่ายและไม่แรง */
+  --text: #f1f5f9;          /* ขาวนวล อ่านง่าย */
+  --muted: #94a3b8;         /* สีเทาอ่อนสำหรับคำอธิบาย */
+  --radius: 18px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 50%, #000 100%);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+}
+.logo {
+  font-weight: 1000;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar .logo-img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: cover;
+  border-radius: 50% !important;   /* 👈 บังคับให้กลม */
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+nav a:hover {
+  color: #fff;
+}
+.btn-nav {
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* Hero */
+.hero {
+  padding: 70px 0 40px;
+  min-height: 100vh;   /* เพิ่มบรรทัดนี้ */
+  display: flex;
+  align-items: center;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+  align-items: center;
+}
+.pill {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.75rem;
+  margin-bottom: 12px;
+}
+h1 {
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  margin: 0 0 12px;
+}
+.accent {
+  color: var(--accent);
+}
+.subtitle {
+  color: var(--muted);
+  max-width: 500px;
+}
+.hero-buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn.primary {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0f172a;
+}
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+.hero-small {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.hero-card {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.05));
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 999px;
+  margin-bottom: 14px;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+}
+.hero-tags {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.hero-tags span {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* Sections */
+.section {
+  padding: 52px 0 36px;
+}
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+.section-text {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* About cards */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.about-card {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+.skill-card {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+.project-card {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+}
+.project-card p {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.project-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+/* Contact */
+.contact-form {
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+  margin-top: 16px;
+}
+.contact-form input,
+.contact-form textarea {
+  background: rgba(15, 23, 42, 0.15);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 12px;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 1px solid rgba(56, 189, 248, 0.4);
+}
+.contact-alt {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 10px 20px;
+  color: rgba(148, 163, 184, 0.4);
+  font-size: 0.7rem;
+}
+
+/* Mobile */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+}
+@media (max-width: 820px) {
+  nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+/* เอฟเฟกต์ hover */
+.logo-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.logo-text {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+}
